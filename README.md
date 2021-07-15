@@ -69,3 +69,4 @@ https://${AUTH0_DOMAIN}/v2/logout?federated
 ## Suggested Improvements
 1. Write unit and e2e tests
 2. Upload profile images to cloud and save image url to a database
+3. API docs was rushed, add more details
