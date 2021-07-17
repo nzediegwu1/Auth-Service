@@ -2,6 +2,9 @@ import { NestFactory } from '@nestjs/core';
 import * as express from 'express';
 import { join } from 'path';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import config from './config/environment.config';
+
+const { PORT } = config;
 
 import { AppModule } from './app.module';
 
@@ -22,6 +25,6 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('/', app, document);
 
-  await app.listen(3000);
+  await app.listen(PORT || 3000);
 }
 bootstrap();
