@@ -8,6 +8,7 @@ const config = Object.freeze({
   AUTH0_CLIENT_SECRET: process.env.AUTH0_CLIENT_SECRET,
   LOGIN_REDIRECT_URL: process.env.LOGIN_REDIRECT_URL,
   REGISTER_REDIRECT_URL: process.env.REGISTER_REDIRECT_URL,
+  BASE_URL: process.env.BASE_URL,
   PORT: process.env.PORT,
 });
 

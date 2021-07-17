@@ -13,7 +13,7 @@ export class AuthenticationMiddleware implements NestMiddleware {
         jwksUri: `${config.AUTH0_DOMAIN}/.well-known/jwks.json`,
       }),
 
-      audience: 'http://localhost:3000',
+      audience: config.BASE_URL,
       issuer: `${config.AUTH0_DOMAIN}/`,
       algorithms: ['RS256'],
     })(req, res, (err) => {
