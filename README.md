@@ -38,11 +38,11 @@ $ yarn start:prod
 ## Usage
 1. To login, go to the following web address (Replace env variables with actual values):
 ```bash
-https://${AUTH0_DOMAIN}/authorize?audience=http://localhost:3000&scope=openid%20profile&response_type=code&client_id=${AUTH0_CLIENT_ID}&redirect_uri=${LOGIN_REDIRECT_URL}&state=STATE?prompt=none
+https://${AUTH0_DOMAIN}/authorize?audience=${BASE_URL}&scope=openid%20profile&response_type=code&client_id=${AUTH0_CLIENT_ID}&redirect_uri=${LOGIN_REDIRECT_URL}&state=STATE?prompt=none
 ```
 2. To register, go to the following web address (Replace env variables with actual values):
 ```bash
-https://${AUTH0_DOMAIN}/authorize?audience=http://localhost:3000&scope=openid%20profile&response_type=code&client_id=${AUTH0_CLIENT_ID}&redirect_uri=${REGISTER_REDIRECT_URL}}&state=STATE?prompt=none
+https://${AUTH0_DOMAIN}/authorize?audience=${BASE_URL}&scope=openid%20profile&response_type=code&client_id=${AUTH0_CLIENT_ID}&redirect_uri=${REGISTER_REDIRECT_URL}}&state=STATE?prompt=none
 ```
 3. After login or register, copy the `auth_token` in your response body and set as bearer token in your request header
 
@@ -58,13 +58,13 @@ https://${AUTH0_DOMAIN}/v2/logout?federated
 ```
 
 ## API Documentation
-- Goto [here](http://localhost:3000/docs)
+- Goto [here](https://anaeze-auth-service.herokuapp.com/)
 
 ## Try it out
 1. Complete the above steps to install and setup the project locally
 2. Start the app
-3. Click [Here](https://anaeze-auth-service.us.auth0.com/authorize?audience=http://localhost:3000&scope=openid%20profile&response_type=code&client_id=m86OgSLOaWlNyImrqlz0h8eVD5sD79To&redirect_uri=http://localhost:3000/auth/register&state=STATE?prompt=none) to register
-4. Copy your `auth_token`, set as `Bearer` token in your headers and tryout other endpoints in the [docs](http://localhost:3000/docs)
+3. Click [Here](https://anaeze-auth-service.us.auth0.com/authorize?audience=https://anaeze-auth-service.herokuapp.com&scope=openid%20profile&response_type=code&client_id=m86OgSLOaWlNyImrqlz0h8eVD5sD79To&redirect_uri=https://anaeze-auth-service.herokuapp.com/auth/register&state=STATE?prompt=none) to register
+4. Copy your `auth_token`, set as `Bearer` token in your headers and tryout other endpoints in the [docs](https://anaeze-auth-service.herokuapp.com/)
 
 ## Suggested Improvements
 1. Write unit and e2e tests
