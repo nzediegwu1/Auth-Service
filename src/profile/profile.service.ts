@@ -12,6 +12,9 @@ export class ProfileService {
     axios.defaults.headers.common.Authorization = authorization;
     const { data } = await axios.post(`${config.AUTH0_DOMAIN}/userinfo`);
 
+    const [, userId] = data.sub.split('|');
+    data.id = userId;
+
     const message = 'Profile successfully retrieved';
     return { message, data };
   }
